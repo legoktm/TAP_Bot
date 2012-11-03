@@ -41,13 +41,10 @@ def create(year):
         talk = page.toggleTalkPage()
         if not talk.exists():
             print 'Creating %s' % talk.title(asLink=True)
-            if 'Palestine' in page.title():
-                tag = '{{WikiProject Palestine|class=Redirect}}'
-                summary = 'Bot: Tagging for [[Wikipedia:WikiProject Palestine]]'
-            else:
-                tag = '{{WikiProject Palestine|class=Redirect}}'
-                summary = 'Bot: Tagging for [[Wikipedia:WikiProject Palestine]]'
+            tag = '{{WikiProject Palestine|class=Redirect}}'
+            summary = 'Bot: Tagging for [[Wikipedia:WikiProject Palestine]]'
             talk.put(tag, summary)
+    
 def main():
     year = 2000
     while year < 2012:
