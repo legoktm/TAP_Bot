@@ -51,6 +51,7 @@ def main():
     while year < 2012:
         create(year)
         year += 1
+    create(1987)
 
 if __name__ == "__main__":
     pywikibot.handleArgs()
